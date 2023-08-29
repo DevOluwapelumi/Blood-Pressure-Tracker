@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blood Pressure Tracker</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .container {
+      margin-top: 50px;
+    }
+    .card {
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .btn-primary {
+      background-color: #007bff;
+      border-color: #007bff;
+    }
+    .btn-primary:hover {
+      background-color: #0056b3;
+      border-color: #0056b3;
+    }
+    .output {
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #fff;
+    }
+    .output p {
+      margin: 0;
+      padding: 5px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h2 class="mb-4">Blood Pressure Tracker</h2>
+      <form>
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label for="date" class="form-label">Date:</label>
+            <input type="date" class="form-control" id="date">
+          </div>
+          <div class="col-md-6">
+            <label for="time" class="form-label">Time:</label>
+            <input type="time" class="form-control" id="time">
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="systolic" class="form-label">Systolic Pressure (mmHg):</label>
+          <input type="number" class="form-control" id="systolic">
+        </div>
+        <div class="mb-3">
+          <label for="diastolic" class="form-label">Diastolic Pressure (mmHg):</label>
+          <input type="number" class="form-control" id="diastolic">
+        </div>
+        <div class="mb-3">
+          <label for="heartRate" class="form-label">Heart Rate (bpm):</label>
+          <input type="number" class="form-control" id="heartRate">
+        </div>
+        <button type="button" class="btn btn-primary" id="submitBtn">Submit</button>
+      </form>
+    </div>
+    <div class="output" id="output"></div>
+  </div>
+  <script>
+    // JavaScript code here (same as provided in previous response)
+  </script>
+</body>
+</html>

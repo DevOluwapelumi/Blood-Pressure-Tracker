@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blood Pressure Tracker</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css">
+<style>
+  body {
+    background-color: #f4f4f4;
+  }
+  .container {
+    margin-top: 50px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h2>Blood Pressure Tracker</h2>
+  <div class="form-group">
+    <label for="date">Date:</label>
+    <input type="date" class="form-control" id="date">
+  </div>
+  <div class="form-group">
+    <label for="time">Time:</label>
+    <input type="time" class="form-control" id="time">
+  </div>
+  <div class="form-group">
+    <label for="systolic">Systolic Pressure (mmHg):</label>
+    <input type="number" class="form-control" id="systolic">
+  </div>
+  <div class="form-group">
+    <label for="diastolic">Diastolic Pressure (mmHg):</label>
+    <input type="number" class="form-control" id="diastolic">
+  </div>
+  <div class="form-group">
+    <label for="heartRate">Heart Rate (bpm):</label>
+    <input type="number" class="form-control" id="heartRate">
+  </div>
+  <button type="button" class="btn btn-primary" id="submitBtn">Submit</button>
+  <div id="output"></div>
+</div>
+<script>
+  document.getElementById("submitBtn").addEventListener("click", function() {
+    const date = document.getElementById("date").value;
+    const time = document.getElementById("time").value;
+    const systolic = document.getElementById("systolic").value;
+    const diastolic = document.getElementById("diastolic").value;
+    const heartRate = document.getElementById("heartRate").value;
+    
+    const output = document.getElementById("output");
+    output.innerHTML += `<p>Date: ${date}</p>`;
+    output.innerHTML += `<p>Time: ${time}</p>`;
+    output.innerHTML += `<p>Systolic Pressure: ${systolic} mmHg</p>`;
+    output.innerHTML += `<p>Diastolic Pressure: ${diastolic} mmHg</p>`;
+    output.innerHTML += `<p>Heart Rate: ${heartRate} bpm</p>`;
+    output.innerHTML += "<hr>";
+    
+    // Clear input fields
+    document.getElementById("date").value = "";
+    document.getElementById("time").value = "";
+    document.getElementById("systolic").value = "";
+    document.getElementById("diastolic").value = "";
+    document.getElementById("heartRate").value = "";
+  });
+</script>
+</body>
+</html>
